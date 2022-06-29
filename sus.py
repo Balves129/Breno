@@ -14,3 +14,5 @@ class compra:
             
             else:
                 pass
+            
+            

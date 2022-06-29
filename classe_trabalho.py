@@ -21,6 +21,11 @@ class Estoque:
         for i in range(len(self.puxar)):
             if coloca == self.puxar[i].cod:
                 self.puxar[i].Produto = input('digite o codigo novo:\n')
+    
+    def comprar_produtos(self):
+        for i in range(len(self.puxar)):
+            print('cod:', self.puxar[i].cod, 'desc:', self.puxar[i].desc, 'fab:', self.puxar[i].fab, 'quant',
+                  self.puxar[i].quant)
 
    
                             

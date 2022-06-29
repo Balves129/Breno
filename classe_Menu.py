@@ -2,12 +2,13 @@ from classe_trabalho import *
 class Menu:
     def __init__(self):
         estoque = Estoque()
-        
+        compra = Compra()
+        compra.entrada = estoque
 
 
 
         while True:
-            entrada = input('1-Cadastrar\n2-Listar\n3-Trocar Produto:\n''4-Sair:\n')
+            entrada = input('1-Cadastrar\n2-Listar\n3-Trocar Produto:\n4-Comprar\n5-Sair:\n')
             print(80*'\033[34m=', '\033[m')
             if entrada == '1':
                 estoque.salvar_produtos()
@@ -16,5 +17,7 @@ class Menu:
             elif entrada == '3':
                 estoque.trocar_produto()
             elif entrada == '4':
+                estoque.comprar_produtos
+            elif entrada == '5':
                 break
                 
