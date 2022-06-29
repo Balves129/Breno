@@ -1,29 +1,20 @@
-from classe_agenda import*
-
+from classe_trabalho import *
 class Menu:
     def __init__(self):
-        agenda= Agenda ()
+        estoque = Estoque()
         
-        ##INICAR MENU
+
+
+
         while True:
-            entrada = input('Informe a opção desejada:'
-                            '\n1 - Novo contato'
-                            '\n2 - Listar Contato'
-                            '\n3 - Alterar celular'
-                            '\n4 - Sair\n') 
-            
+            entrada = input('1-Cadastrar\n2-Listar\n3-Trocar Produto:\n''4-Sair:\n')
+            print(80*'\033[34m=', '\033[m')
             if entrada == '1':
-                agenda.salvar_contatos()
-            
+                estoque.salvar_produtos()
             elif entrada == '2':
-                agenda.listar_todos_contatos()
-            
+                estoque.listar_produtos()
             elif entrada == '3':
-                agenda.alterar_celular()
-            
+                estoque.trocar_produto()
             elif entrada == '4':
                 break
-            else:
-                print('opção errada!')
-                
                 
