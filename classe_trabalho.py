@@ -1,8 +1,10 @@
+
 from classe_lista import *
 class Estoque:
     def __init__(self):
         self.puxar = []
-        self.puxar.append(Produto(2,'banana','breno',21))
+        self.puxar.append(Produto(50,'carro','Mercedez',21,
+                                  49,'moto','Audi',12))
 
     def salvar_produtos(self):
         entrada_cod = input('informe o codigo:\n')
