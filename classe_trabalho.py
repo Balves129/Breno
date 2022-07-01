@@ -17,6 +17,7 @@ class Estoque:
         for i in range(len(self.puxar)):
             print('cod:', self.puxar[i].cod, 'desc:', self.puxar[i].desc, 'fab:', self.puxar[i].fab, 'quant',
                   self.puxar[i].quant)
+            print('===================================================')
 
    
     def alterar_produto(self):
@@ -24,11 +25,7 @@ class Estoque:
         for i in range(len(self.puxar)):
             if entrada == self.puxar[i].cod:
                 self.puxar[i].desc= input('Nome do Produto: ')
-                print('=====================================')
+                print('===============================================')
     
-    # def ver_historico(self):
-    #     for i in range(len(self.puxar)):
-    #         if entrada == self.puxar[i].hist:
-    #             self.puxar.append(Produto())
-    #             self.puxar[i].hist
+    
                        
