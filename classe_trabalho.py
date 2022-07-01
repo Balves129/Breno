@@ -3,8 +3,7 @@ from classe_lista import *
 class Estoque:
     def __init__(self):
         self.puxar = []
-        self.puxar.append(Produto(50,'carro','Mercedez',21,
-                                  49,'moto','Audi',12))
+        self.puxar.append(Produto(50,'carro','Mercedez',100))
 
     def salvar_produtos(self):
         entrada_cod = input('informe o codigo:\n')
@@ -21,11 +20,15 @@ class Estoque:
 
    
     def alterar_produto(self):
-        entrada=input('Escreve aí: ')
+        entrada=input('Digite o código: ')
         for i in range(len(self.puxar)):
             if entrada == self.puxar[i].cod:
-                self.puxar[i].desc= input('Escreve dnovo: ')
-                print('=====================================')        
-   
-                            
-                    
+                self.puxar[i].desc= input('Nome do Produto: ')
+                print('=====================================')
+    
+    # def ver_historico(self):
+    #     for i in range(len(self.puxar)):
+    #         if entrada == self.puxar[i].hist:
+    #             self.puxar.append(Produto())
+    #             self.puxar[i].hist
+                       
