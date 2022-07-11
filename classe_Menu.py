@@ -1,9 +1,11 @@
 from classe_trabalho import *
 from sus import *
 from classe_venda import*
+from classe_estoque import DB_estoque
+
 class Menu:
     def __init__(self):
-        estoque = Estoque()
+        estoque = DB_estoque()
         compra = Compra()
         saida = Venda()
         saida.entrada = estoque
@@ -12,12 +14,17 @@ class Menu:
 
 
         while True:
-            entrada = input('1-Cadastrar produto\n2-Listar\n3-comprar Produto:\n4-Alterar Descrição:'
-                            '\n5-Vender produto:\n6-historico de venda:\n7-historico de compra:\n8-Sair')
+            entrada = input('1-Cadastrar produto\n2-Listar\n3-comprar Produto:\n4- listar fabricante:'
+                            '\n5-Vender produto:\n6-historico de venda:\n7-historico de compra:\n0-Sair')
                             
             print(80*'\033[34m=', '\033[m')
             if entrada == '1':
-                estoque.salvar_produtos()
+                cod=int(input('Digite o codigo do produto: '))
+                nome= (input("Cadastre seu produto: "))
+                cod_fabricante = int(input('Digite o codigo do fabricante: '))
+                quant = int(input('Digite a quantidade: '))
+                estoque.cadastrar_produtos(cod, nome, cod_fabricante, quant)
+
             
             elif entrada == '2':
                 estoque.listar_produtos()
@@ -26,7 +33,7 @@ class Menu:
                 compra.comprar()
             
             elif entrada == '4':
-                estoque.alterar_produto()
+                estoque.listar_fab()
             
             elif entrada =='5':
                 saida.vender()
@@ -37,7 +44,7 @@ class Menu:
             elif entrada== '7':
                 compra.his()
             
-            elif entrada == '8':
+            elif entrada == '0':
                 break
 
 

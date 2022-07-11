@@ -1,5 +1,4 @@
-from classe_menu import *
-
+from classe_menu import Menu
 
 menu = Menu()
 
